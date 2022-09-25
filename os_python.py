@@ -4,6 +4,29 @@ import glob
 path=r"D:\project\python coding"
 directory=r"D:\project\python coding\python"    
 file_path="abc.txt" 
+
+
+def create_dir(path):
+    try:
+        if not os.path.exists(path):
+            os.makedirs(path)
+    except OSError:
+        print(f"ERROR: creating directory with name {path}")
+        
+def remove_dir(path):
+    try:
+        if os.path.exists(path):
+            shutil.rmtree(path)
+    except OSError:
+        print(f"ERROR: deleting directory with name {path}")
+
+#get files in all  directories and subdirectories with extension in '.txt' like that
+def get_files(path,extension):
+    path=extension+"/**/*"+extension
+    #path = r'E:/account/**/*.txt' #example
+    files = glob.glob(path, recursive=True)
+
+
 # Get the current working 
 
 cwd = os.getcwd() 

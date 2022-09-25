@@ -13,7 +13,7 @@ To does:
     - make dict count from a list
     -  
 6. Argparse (done)
-7. Json file parse read .
+7. Json file parse read /write
 8. Read write of all different kinds in competitive coding or files.(done)
 9. OS python methods: listdir,makedir if exist, walk. (in progress)
 10. colab stater file
